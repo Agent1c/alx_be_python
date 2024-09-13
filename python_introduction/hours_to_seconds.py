@@ -1,6 +1,5 @@
 #Convert Hours to Seconds
 hours = 2
-seconds = 3600
+seconds =  hours * 3600
 
-total = hours * seconds
-print(f"2 hour(s) is {total} seconds.")
+print(f"2 hour(s) is {seconds} seconds.")
