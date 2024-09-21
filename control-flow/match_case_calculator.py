@@ -1,7 +1,7 @@
 # 1. Simple Calculator with Match Case
 
-num1 = int(input("Enter the first number ")) # Prompt User for int number Input:
-num2 = int(input("Enter the second number "))
+num1 = int(input("Enter the first number: ")) # Prompt User for int number Input:
+num2 = int(input("Enter the second number: "))
 
 operator = str(input("Choose the operation (+, -, *, /) ")) #Calculator operator
 
