@@ -3,10 +3,10 @@
 num1 = int(input("Enter the first number: ")) # Prompt User for int number Input:
 num2 = int(input("Enter the second number: "))
 
-operator = str(input("Choose the operation (+, -, *, /):")) #Calculator operator
+operation = str(input("Choose the operation (+, -, *, /):")) #Calculator operator
 
 #calculator function
-match operator:
+match operation:
     case "+":
         print("The result is", num1 + num2)
     case "-":
