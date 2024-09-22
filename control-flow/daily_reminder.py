@@ -11,10 +11,10 @@ reminder = "Reminder:"
 match priority:
     case "high" | "medium" | "low":
         if time_bound == "yes":
-            print(f"{reminder} {task} is a {priority} priority task that requires immediate attention today!")
+            f"{reminder} {task} is a {priority} priority task that requires immediate attention today!"
         else:
             if time_bound == "no":
-                print(f"Note: {task} is a {priority} priority task. Consider completing it when you have free time.")
+                f"Note: {task} is a {priority} priority task. Consider completing it when you have free time."
     case _ :
         print("I dont have a reminder or time bond for your request")
 
