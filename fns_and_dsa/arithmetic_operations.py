@@ -8,16 +8,14 @@ def perform_operation(num1, num2, operation):
         return subtract(num1, num2)
     elif operation == "multiply":
         return multiply(num1, num2)
-    elif operation == "divide":
+    elif operation == 'divide':
         #Controlling Zero division error, returning it
-        if num2 ==0:
-            print("Cannot Divide by Zero.")
-        elif num1 ==0:
-            print("Cannot Divide by Zero.")
-        else:
-            return divide(num1, num2)
+        try:
+            return num1 / num2
+        except ZeroDivisionError:
+            return f"Error: Division by zero is not allowed."
     else:
-        print("Invalid operation, Please try again.")
+        print("Error: Invalid operation. Please use 'add', 'subtract', 'multiply', or 'divide'.")
 
     #Arithmetics Functions lining from "+", "-", " * " & " / "
     def add(num1, num2):
@@ -30,11 +28,6 @@ def perform_operation(num1, num2, operation):
         return num1 * num2
 
     def divide(num1, num2):
-        if num2 ==0:
-            print("Cannot Divide by Zero.")
-        elif num1 ==0:
-            print("Cannot Divide by Zero.")
-        else:
-            return num1 / num2
-        
-        perform_operation(num1, num2, operation)
+        return num1 / num2
+
+    perform_operation(num1, num2, operation)
