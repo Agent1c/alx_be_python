@@ -10,9 +10,9 @@ def perform_operation(num1, num2, operation):
         return multiply(num1, num2)
     elif operation == "divide":
         #Controlling Zero division error, returning it
-        if num1 ==0:
+        if num2 ==0:
             print("Cannot Divide by Zero.")
-        elif num2 ==0:
+        elif num1 ==0:
             print("Cannot Divide by Zero.")
         else:
             return divide(num1, num2)
