@@ -9,25 +9,27 @@ def perform_operation(num1, num2, operation):
     elif operation == "multiply":
         return multiply(num1, num2)
     elif operation == "divide":
-        return divide(num1, num2)
+        #Controlling Zero division error, returning it
+        if num1 ==0:
+            print("Cannot Divide by Zero.")
+        elif num2 ==0:
+            print("Cannot Divide by Zero.")
+        else:
+            return divide(num1, num2)
     else:
         print("Invalid operation, Please try again.")
 
-#Arithmetics Functions lining from "+", "-", " * " & " / "
-def add(num1, num2):
-    return num1 + num2
+    #Arithmetics Functions lining from "+", "-", " * " & " / "
+    def add(num1, num2):
+        return num1 + num2
 
-def subtract(num1, num2):
-    return num1 - num2
+    def subtract(num1, num2):
+        return num1 - num2
 
-def multiply(num1, num2):
-    return num1 * num2
+    def multiply(num1, num2):
+        return num1 * num2
 
-def divide(num1, num2):
-    try:    #Controlling Zero division error, returning it
-        num1 / num2
-    except ZeroDivisionError:
-        print("Cannot Divide by Zero.")
-    else:
+    def divide(num1, num2):
         return num1 / num2
-    perform_operation(num1, num2)
+        
+        perform_operation(num1, num2, operation)
