@@ -22,7 +22,7 @@ class BankAccount:
                 amount = float(input("Withdraw amount: "))
                 if self.account_balance >= amount:
                     self.account_balance -= amount
-                    print(f"You withdrew ${amount}")
+                    print(f"Withdrew: ${amount}")
                 else:
                     print(f"Insufficient Funds {self.account_balance}")
             except ValueError as e:
@@ -30,6 +30,6 @@ class BankAccount:
 
     # Displaying current balance.
     def display_balance(self):
-        print(f"Your current balance is ${self.account_balance}")
+        print(f"Current Balance: ${self.account_balance}")
         
 
