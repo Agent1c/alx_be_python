@@ -10,7 +10,7 @@ class BankAccount:
 
                 amount = float(input("Deposit: "))
                 self.account_balance += amount
-                print(f"Your Current balance is ${amount}")
+                print(f"Deposit: ${amount}")
                 # pass
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
