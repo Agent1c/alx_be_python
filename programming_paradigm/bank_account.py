@@ -11,7 +11,7 @@ class BankAccount:
                 amount = float(input("Deposit: "))
                 self.account_balance += amount
                 print(f"Deposit: ${amount}")
-                
+                break
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
     #Withdrawal Method
@@ -23,7 +23,7 @@ class BankAccount:
                 if self.account_balance >= amount:
                     self.account_balance -= amount
                     print(f"Withdrew: ${amount}")
-                    
+                    break
                 else:
                     print(f"Insufficient Funds {self.account_balance}")
             except ValueError as e:
