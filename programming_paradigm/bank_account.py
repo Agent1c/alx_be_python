@@ -4,28 +4,28 @@ class BankAccount:
 
     #Depositing Method
     def deposit(self,amount):
-        while True:
+        # while True:
             """Looping thru the deposit function"""
             try:
 
-                amount = float(input("Deposit: "))
+                # amount = float(input("Deposit: "))
                 self.account_balance += amount
                 print(f"Deposit: ${amount}")
-                break
+                # break
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
     #Withdrawal Method
     def withdraw(self,amount):
-        while True:
+        # while True:
             """Looping thru the withdrawal function"""
             try:
-                amount = float(input("Withdraw amount: "))
-                if self.account_balance >= amount:
+                # amount = float(input("Withdraw amount: "))
+                if  self.account_balance >= amount:
                     self.account_balance -= amount
                     print(f"Withdrew: ${amount}")
-                    break
+                    # break
                 else:
-                    print(f"Insufficient Funds {self.account_balance}")
+                    print(f"Insufficient Funds")
             except ValueError as e:
                 print(f"Invalid input, try again {e}") #Raising value error
 
