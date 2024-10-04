@@ -20,12 +20,13 @@ class BankAccount:
             """Looping thru the withdrawal function"""
             try:
                 # amount = float(input("Withdraw amount: "))
-                if  self.account_balance >= amount:
+                if amount <= self.account_balance:
                     self.account_balance -= amount
                     print(f"Withdrew: ${amount}")
-                    # break
+                    return True
                 else:
                     print(f"Insufficient Funds")
+                    return False
             except ValueError as e:
                 print(f"Invalid input, try again {e}") #Raising value error
 
