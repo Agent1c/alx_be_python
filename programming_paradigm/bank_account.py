@@ -7,11 +7,12 @@ class BankAccount:
         # while True:
             """Looping thru the deposit function"""
             try:
+                if amount > 0:
 
-                # amount = float(input("Deposit: "))
-                self.account_balance += amount
-                print(f"Deposit: ${amount:.2f}")
-                # break
+                    # amount = float(input("Deposit: "))
+                    self.account_balance += amount
+                    print(f"Deposit: ${amount:.2f}")
+                    # break
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
     #Withdrawal Method
