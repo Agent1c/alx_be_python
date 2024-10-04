@@ -10,7 +10,7 @@ class BankAccount:
 
                 # amount = float(input("Deposit: "))
                 self.account_balance += amount
-                print(f"Deposit: ${amount}")
+                print(f"Deposit: ${amount:.2f}")
                 # break
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
@@ -22,7 +22,7 @@ class BankAccount:
                 # amount = float(input("Withdraw amount: "))
                 if amount <= self.account_balance:
                     self.account_balance -= amount
-                    print(f"Withdrew: ${amount}")
+                    print(f"Withdrew: ${amount:.2f}")
                     return True
                 else:
                     print(f"Insufficient Funds")
@@ -32,6 +32,6 @@ class BankAccount:
 
     # Displaying current balance.
     def display_balance(self):
-        print(f"Current Balance: ${self.account_balance}")
+        print(f"Current Balance: ${self.account_balance:.2f}")
         
 
