@@ -11,10 +11,11 @@ class BankAccount:
 
                     # amount = float(input("Deposit: "))
                     self.account_balance += amount
-                    print(f"Deposit: ${amount:.2f}")
+                    return True
                     # break
             except ValueError as e:
                 print(f"Invalid input {e}")  #Raising value error
+                return False
     #Withdrawal Method
     def withdraw(self,amount):
         # while True:
