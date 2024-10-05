@@ -1,8 +1,10 @@
 def safe_divide(numerator, denominator):
     try:
         """User inputs prompt responds"""
-        numerator = float(numerator), denominator = float(denominator)
+        numerator = float(numerator)
+        denominator = float(denominator)
         result = numerator / denominator
+
         """ZeroDivision and ValueError handlers"""
     except ZeroDivisionError as e:
         return "Error: Cannot divide by zero."
