@@ -37,21 +37,21 @@ class Library:
         for book in self._books:
             if book.title == title:
                 if book.check_out():
-                    return f"You've checked out {title} by {book.author}"
+                    return book.author
                 else:
-                    return "That book is currently checked out."
+                    return title
                 
-        return "We don't have that book in our library."
+        return 
 
     """Returning/restoring a book into library"""
     def return_book(self, title):
         for book in self._books:
             if book.title == title:
                 if book.return_book():
-                    return f"You have returned '{title}'."
+                    return title
                 else:
-                    return f"'{title}' was not checked out."
-        return f"'{title}' not found in the library."
+                    return title
+        return title
 
     """Listing available/left books in library"""
     def list_available_books(self, title):
