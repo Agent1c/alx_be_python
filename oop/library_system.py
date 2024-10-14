@@ -3,6 +3,9 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self) -> str:
+        return f"Title: {self.title}, Author: {self.author}"
+    
 class EBook(Book):
     def __init__(self, title, author , file_size):
         super().__init__(title, author)
@@ -13,6 +16,9 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
+    def __str__(self) -> str:
+        return f"{super().__str__()}, Page count: {self.page_count}"
+    
 class Library:
     def __init__(self):
         self.books = [] # Initialize the books list
@@ -21,10 +27,16 @@ class Library:
         self.books.append(book) # Append the book to the instance's book list
 
     def list_books(self):
+        if not self.books:
+            print("No books in the library.")
+            return
         for book in self.books:
-            # Check if it's an instance of PrintBook to access page_count
-            if isinstance(book, PrintBook):
-                print(f"Title: {book.title}, Author: {book.author}, Pages: {book.page_count}")
-            else:
-                print(f"Title: {book.title}, Author: {book.author}, File Size: {book.file_size}")
+            print(book)  # Print the details of each book
+            
+        # for book in self.books:
+        #     # Check if it's an instance of PrintBook to access page_count
+        #     if isinstance(book, PrintBook):
+        #         print(f"Title: {book.title}, Author: {book.author}, Pages: {book.page_count}")
+        #     else:
+        #         print(f"Title: {book.title}, Author: {book.author}, File Size: {book.file_size}")
         
