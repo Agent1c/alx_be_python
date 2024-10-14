@@ -3,13 +3,16 @@ class Book:
         self.title = title
         self.author = author
 
-    def __str__(self) -> str:
-        return f"Title: {self.title}, Author: {self.author}"
+    def __str__(self):
+        return f"Book: {self.title}, Author: {self.author}"
     
 class EBook(Book):
     def __init__(self, title, author , file_size):
         super().__init__(title, author)
         self.file_size = file_size
+
+    def __str__(self):
+        return f"EBook: {self.title}{super().__str__()}, File Size: {self.file_size} KB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -17,7 +20,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self) -> str:
-        return f"{super().__str__()}, Page count: {self.page_count}"
+        return f"PrintBook: {self.title}{super().__str__()}, Page count: {self.page_count}"
     
 class Library:
     def __init__(self):
@@ -32,7 +35,7 @@ class Library:
             return
         for book in self.books:
             print(book)  # Print the details of each book
-            
+
         # for book in self.books:
         #     # Check if it's an instance of PrintBook to access page_count
         #     if isinstance(book, PrintBook):
