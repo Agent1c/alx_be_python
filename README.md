@@ -18,10 +18,11 @@
 - This project lays the foundation for your Python programming journey, equipping you with the essential knowledge to begin writing simple Python programs and
     progress towards more complex concepts.
 ```
+
 ### Apps Task
-- 0. Basic Arithmetic Exercise
-- 1. Simple Interest Calculator
-- 2. Calculate the Area of a Rectangle
-- 3. Convert Hours to Seconds
-- 4. User Input Age Calculator
-- 5. Personal Finance Calculator
+
+- i. Python_Introduction
+- ii. Control-Flow
+- iii. Fns and Dsa
+- vi. Programming Paradigm
+- v. OOP
